@@ -21,13 +21,13 @@
 #include <math.h>
 using namespace std;
 
-int nt[1000001];
+int nt[1001];
 void sangSNT(){
-    for(int i = 0; i<1000001; i++) nt[i] = 1;
+    for(int i = 0; i<1001; i++) nt[i] = 1;
     nt[0] = nt[1] = 0;
-    for(int i = 2; i<sqrt(1000001); i++){
+    for(int i = 2; i<sqrt(1001); i++){
         if(nt[i]){
-            for(int j = i*i; j<1000001; j+=i) nt[j] = 0;
+            for(int j = i*i; j<1001; j+=i) nt[j] = 0;
         }
     }
 }
